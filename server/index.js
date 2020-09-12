@@ -18,3 +18,8 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+    //res.send('a new node project');
+    res.render('index' , {title:"My Own Shop | Home"});
+});
